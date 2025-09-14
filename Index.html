@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QR Code Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🔳 QR Code Generator</h1>
+    <p class="subtitle">Generate QR codes from text or links — customize size & color, then download.</p>
+
+    <div class="card">
+      <label for="text">Enter text or URL</label>
+      <textarea id="text" placeholder="Paste URL or enter text here"></textarea>
+
+      <div class="row">
+        <div class="field">
+          <label for="size">Size (px)</label>
+          <input id="size" type="number" min="128" max="1024" value="300" />
+        </div>
+
+        <div class="field">
+          <label for="color">Color</label>
+          <input id="color" type="color" value="#111827" />
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button id="generate">Generate QR</button>
+        <button id="download" disabled>⬇️ Download PNG</button>
+        <button id="clear" class="muted">Clear</button>
+      </div>
+
+      <div class="qr-area">
+        <canvas id="qr-canvas" hidden></canvas>
+        <div id="qr-preview" class="placeholder">Your QR will appear here</div>
+      </div>
+    </div>
+
+    <footer>Made by Siva Durshika G • Arunachala College of Engineering for Women</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
